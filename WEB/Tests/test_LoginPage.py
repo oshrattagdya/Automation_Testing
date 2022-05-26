@@ -102,6 +102,18 @@ class TestLogincoreectly(Base):
         assert button == False
 
 
+    def test_COPT_TEST_FOR_GIT(self):
+        driver = self.driver
+        login = LoginPageFunc(driver)
+        login.Click_func()
+        login.enter_email("")
+        login.enter_password("")
+        login.click_Login()
+
+        button = driver.find_element(By.XPATH, "//div[1]/form[1]/input[3]").is_enabled()
+        assert button == False
+
+
 
 
 
